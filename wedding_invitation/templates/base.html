@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jocelyne & Prosper | Invitation de Mariage</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background: #050B18;
+            overflow-x: hidden;
+        }
+
+        .title-font{
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .hero-overlay{
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,.4),
+                rgba(0,0,0,.7)
+            );
+        }
+
+        .glass{
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .gold-text{
+            color: #D4AF37;
+        }
+
+        .gold-border{
+            border-color: #D4AF37;
+        }
+
+        .btn-gold{
+            background: #D4AF37;
+            color: #050B18;
+            transition: .4s;
+        }
+
+        .btn-gold:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212,175,55,.5);
+        }
+
+        .floating{
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-15px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+</head>
+
+<body class="text-white">
+
+    {% include 'partials/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'partials/footer.html' %}
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+    </script>
+
+</body>
+</html>
