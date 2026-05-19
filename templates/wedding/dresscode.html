@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Dress code | Jocelyne & Prosper{% endblock %}
+
+{% block content %}
+<section class="page-hero section-shell bg-[#071120] text-center">
+    <p class="uppercase tracking-[6px] text-xs text-white/50 mb-4">Dress code</p>
+    <h1 class="section-title text-5xl md:text-6xl gold-text mb-6">Élégance chic</h1>
+    <p class="max-w-3xl mx-auto text-white/75 leading-8">
+        Nous vous invitons à porter une tenue habillée, dans une harmonie sobre et festive.
+    </p>
+</section>
+
+<section class="section-shell">
+    <div class="max-w-5xl mx-auto grid gap-5 md:grid-cols-3">
+        <div class="soft-panel p-6">
+            <div class="h-14 w-14 rounded-full bg-[#D4AF37] mb-5"></div>
+            <h2 class="text-xl font-semibold mb-3">Or</h2>
+            <p class="text-white/65 leading-7">Pour les touches lumineuses, bijoux et accessoires.</p>
+        </div>
+        <div class="soft-panel p-6">
+            <div class="h-14 w-14 rounded-full bg-white mb-5"></div>
+            <h2 class="text-xl font-semibold mb-3">Blanc</h2>
+            <p class="text-white/65 leading-7">À utiliser avec discrétion pour garder l'harmonie de la cérémonie.</p>
+        </div>
+        <div class="soft-panel p-6">
+            <div class="h-14 w-14 rounded-full bg-[#050B18] border border-white/30 mb-5"></div>
+            <h2 class="text-xl font-semibold mb-3">Bleu nuit</h2>
+            <p class="text-white/65 leading-7">Une base élégante pour les costumes, robes et ensembles.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

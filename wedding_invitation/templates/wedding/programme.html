@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Programme | Jocelyne & Prosper{% endblock %}
+
+{% block content %}
+<section class="page-hero section-shell bg-[#071120] text-center">
+    <p class="uppercase tracking-[6px] text-xs text-white/50 mb-4">Programme</p>
+    <h1 class="section-title text-5xl md:text-6xl gold-text mb-6">Déroulé de la journée</h1>
+    <p class="max-w-3xl mx-auto text-white/75 leading-8">
+        Retrouvez les principaux rendez-vous de la célébration pour vivre chaque moment avec nous.
+    </p>
+</section>
+
+<section class="section-shell">
+    <div class="max-w-4xl mx-auto">
+        <div class="space-y-5">
+            <div class="soft-panel p-6 flex flex-col md:flex-row gap-5 md:items-center" data-aos="fade-up">
+                <div class="gold-text text-3xl font-semibold md:w-32">10h00</div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Cérémonie civile</h2>
+                    <p class="text-white/65 mt-2">Accueil, installation et officialisation de l'union.</p>
+                </div>
+            </div>
+            <div class="soft-panel p-6 flex flex-col md:flex-row gap-5 md:items-center" data-aos="fade-up">
+                <div class="gold-text text-3xl font-semibold md:w-32">14h00</div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Bénédiction nuptiale</h2>
+                    <p class="text-white/65 mt-2">Célébration religieuse, prières, chants et bénédictions.</p>
+                </div>
+            </div>
+            <div class="soft-panel p-6 flex flex-col md:flex-row gap-5 md:items-center" data-aos="fade-up">
+                <div class="gold-text text-3xl font-semibold md:w-32">18h00</div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Réception</h2>
+                    <p class="text-white/65 mt-2">Dîner, animations, photos, danse et célébration familiale.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 soft-panel p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <div>
+                <h2 class="text-xl font-semibold">Vous arrivez de loin?</h2>
+                <p class="text-white/65 mt-2">Prévenez les familles afin que votre arrivée soit mieux coordonnée.</p>
+            </div>
+            <a href="/contact/" class="btn-gold px-7 py-3 rounded-full font-semibold tracking-wider">Contacter</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

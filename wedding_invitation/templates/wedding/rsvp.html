@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}RSVP | Jocelyne & Prosper{% endblock %}
+
+{% block content %}
+<section class="page-hero section-shell bg-[#071120] text-center">
+    <p class="uppercase tracking-[6px] text-xs text-white/50 mb-4">RSVP</p>
+    <h1 class="section-title text-5xl md:text-6xl gold-text mb-6">Confirmer votre présence</h1>
+    <p class="max-w-3xl mx-auto text-white/75 leading-8">
+        Merci de nous répondre dès que possible afin de nous aider à préparer votre accueil.
+    </p>
+</section>
+
+<section class="section-shell">
+    <div class="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_1.4fr] items-start">
+        <aside class="soft-panel p-6 lg:sticky lg:top-28">
+            <p class="uppercase tracking-[5px] text-xs text-white/45 mb-4">Avant d'envoyer</p>
+            <div class="space-y-5">
+                <div>
+                    <h2 class="font-semibold text-lg">Répondez une seule fois</h2>
+                    <p class="text-white/65 text-sm leading-6 mt-2">Indiquez le nombre exact de personnes qui vous accompagneront.</p>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-lg">Signalez les contraintes</h2>
+                    <p class="text-white/65 text-sm leading-6 mt-2">Utilisez le message pour préciser une contrainte alimentaire ou une demande spéciale.</p>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-lg">Besoin d'aide?</h2>
+                    <p class="text-white/65 text-sm leading-6 mt-2">La page contact contient les numéros des familles pour les questions urgentes.</p>
+                </div>
+            </div>
+        </aside>
+
+        {% include 'components/rsvp_form.html' %}
+    </div>
+</section>
+{% endblock %}

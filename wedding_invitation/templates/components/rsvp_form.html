@@ -1,0 +1,44 @@
+<form class="soft-panel p-6 md:p-8 space-y-5" method="get">
+    <div class="flex items-start gap-4 rounded-lg bg-[#D4AF37]/10 border border-[#D4AF37]/25 p-4">
+        <div class="h-9 w-9 rounded-full bg-[#D4AF37] text-[#050B18] flex items-center justify-center font-semibold">1</div>
+        <div>
+            <h2 class="font-semibold">Confirmation rapide</h2>
+            <p class="text-sm text-white/65 mt-1">Remplissez ce formulaire pour aider les familles à organiser les places et le repas.</p>
+        </div>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2">
+        <label class="block">
+            <span class="text-sm text-white/70">Nom complet</span>
+            <input name="name" type="text" required autocomplete="name" placeholder="Votre nom et prénom" class="mt-2 input-field">
+        </label>
+        <label class="block">
+            <span class="text-sm text-white/70">Téléphone</span>
+            <input name="phone" type="tel" autocomplete="tel" placeholder="+237 ..." class="mt-2 input-field">
+        </label>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2">
+        <label class="block">
+            <span class="text-sm text-white/70">Présence</span>
+            <select name="attendance" required class="mt-2 input-field bg-[#071120]">
+                <option value="">Choisir</option>
+                <option>Je serai présent(e)</option>
+                <option>Je ne pourrai pas venir</option>
+            </select>
+        </label>
+        <label class="block">
+            <span class="text-sm text-white/70">Nombre d'invités</span>
+            <input name="guests" type="number" min="1" max="5" value="1" class="mt-2 input-field">
+        </label>
+    </div>
+
+    <label class="block">
+        <span class="text-sm text-white/70">Message aux mariés</span>
+        <textarea name="message" rows="4" placeholder="Un mot, une bénédiction ou une contrainte alimentaire..." class="mt-2 input-field"></textarea>
+    </label>
+
+    <button type="submit" class="btn-gold w-full md:w-auto px-9 py-4 rounded-full font-semibold tracking-wider">
+        Envoyer ma réponse
+    </button>
+</form>

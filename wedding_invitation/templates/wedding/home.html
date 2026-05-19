@@ -1,83 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}Accueil | Jocelyne & Prosper{% endblock %}
+
 {% block content %}
-
-<!-- HERO SECTION -->
-<section class="relative h-screen overflow-hidden">
-
-    <!-- BACKGROUND IMAGE -->
-    <div class="absolute inset-0">
-
-        <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
-            class="w-full h-full object-cover scale-110 animate-pulse"
-        >
-
-        <div class="absolute inset-0 hero-overlay"></div>
-
-    </div>
-
-    <!-- HERO CONTENT -->
-    <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
-
-        <div>
-
-            <p
-                data-aos="fade-down"
-                class="uppercase tracking-[8px] text-sm mb-6 text-white/80"
-            >
-                Invitation au Mariage
-            </p>
-
-            <h1
-                data-aos="zoom-in"
-                class="title-font text-7xl md:text-9xl gold-text mb-6 floating"
-            >
-                Jocelyne <br>& <br> Prosper
-            </h1>
-
-            <p
-                data-aos="fade-up"
-                class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 leading-relaxed mb-10"
-            >
-                Avec joie, amour et reconnaissance,
-                nous vous invitons à célébrer le début
-                de notre nouvelle vie ensemble.
-            </p>
-
-            <!-- BUTTONS -->
-            <div
-                data-aos="fade-up"
-                class="flex flex-col md:flex-row items-center justify-center gap-5"
-            >
-
-                <a href="#"
-                   class="btn-gold px-10 py-4 rounded-full font-semibold tracking-wider">
-                    Confirmer Présence
-                </a>
-
-                <a href="#"
-                   class="border gold-border px-10 py-4 rounded-full hover:bg-white hover:text-black transition">
-                    Découvrir Notre Histoire
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- SCROLL ICON -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-
-        <div class="w-8 h-14 border-2 border-white rounded-full flex justify-center">
-
-            <div class="w-2 h-2 bg-white rounded-full mt-3 animate-bounce"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
+{% include 'components/hero.html' %}
+{% include 'components/countdown.html' %}
+{% include 'components/practical_info.html' %}
+{% include 'components/story_section.html' %}
+{% include 'components/programme_section.html' %}
+{% include 'components/gallery_section.html' %}
+{% include 'components/footer_section.html' %}
 {% endblock %}
