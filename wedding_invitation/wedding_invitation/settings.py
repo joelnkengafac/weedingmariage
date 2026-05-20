@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-ez$)(+%wkao^1vfp4d43@=c$v81ni3@+nbj2nzfa@z%g_4egg!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'weedingmariage.onrender.com', 
+    'weddingmariage.duckdns.org', 
+    'localhost', 
+    '127.0.0.1'
+]
 
 
 # Application definition
