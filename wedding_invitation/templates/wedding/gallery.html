@@ -13,12 +13,31 @@
 
 <section class="section-shell">
     <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop" alt="Mariage élégant">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=900&auto=format&fit=crop" alt="Décoration florale">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=900&auto=format&fit=crop" alt="Couple de mariés">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=900&auto=format&fit=crop" alt="Réception">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=900&auto=format&fit=crop" alt="Fleurs de mariage">
-        <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=900&auto=format&fit=crop" alt="Bouquet">
+
+        {% if photos %}
+            {% for photo in photos %}
+            <figure class="relative">
+                <img
+                    class="w-full aspect-[4/5] object-cover rounded-lg"
+                    src="{{ photo.image.url }}"
+                    alt="{{ photo.caption|default:'Photo de mariage' }}"
+                >
+                {% if photo.caption %}
+                <figcaption class="text-xs text-white/50 mt-2 px-1">{{ photo.caption }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endfor %}
+
+        {% else %}
+            {# Placeholder Unsplash tant qu'aucune photo n'est ajoutée via l'admin #}
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop" alt="Mariage élégant">
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=900&auto=format&fit=crop" alt="Décoration florale">
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=900&auto=format&fit=crop" alt="Couple de mariés">
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=900&auto=format&fit=crop" alt="Réception">
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=900&auto=format&fit=crop" alt="Fleurs de mariage">
+            <img class="w-full aspect-[4/5] object-cover rounded-lg" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=900&auto=format&fit=crop" alt="Bouquet">
+        {% endif %}
+
     </div>
 </section>
 
